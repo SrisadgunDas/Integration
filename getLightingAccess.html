@@ -1,0 +1,23 @@
+<template>
+    <div class="container">
+    <lightning-card  title="GetAccess code" icon-name="custom:custom7" >
+            <lightning-input label="Access Token  is"  value={GotValuesFrom}></lightning-input><br/>
+            <lightning-button label="showToken" onclick={handleclick}></lightning-button>
+            
+
+            <lightning-input label="Give Case Id"  onchange={onchangeCaseid}></lightning-input><br/>
+            <lightning-button label="getcases" onclick={onclickgetcaseid}></lightning-button>
+            <lightning-input  max-length="2000" label="Access Response data"  value={withaccessResponse}></lightning-input><br/>
+            <p><b>Case Number : <span class="RedText"> {CaseNumber}</span>&nbsp;  Subject : <span class="RedText">{caseSubject}</span></b></p>
+            <p><b>Status : <span class="RedText">{CaseStatus}</span>&nbsp;&nbsp; Origin : <span class="RedText">{caseOrigin}</span></b></p>
+            <p><b>Priority: <span class="RedText">{CasePriority}</span>&nbsp;&nbsp; Id : <span class="RedText">{caseId}</span></b></p><br/><br/>
+
+            <lightning-textarea name="input1" label="Enter some text" onchange={PostSendRequest} ></lightning-textarea><br/><br/>
+            <lightning-button label="Send Body" onclick={onhandleSends}></lightning-button>
+           
+            <lightning-input label="Give Id to Delete case :"  onchange={onchangedelete}></lightning-input><br/>
+            <lightning-button label="Delete" onclick={ondeleteCase}></lightning-button>
+        
+    </lightning-card>
+</div>
+</template>
