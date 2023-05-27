@@ -56,5 +56,9 @@ global with sharing class CaseManager {
         }
         update thisCase;
         return thisCase.Id;
-    }    
+    }   
+    @httpdelete
+    public static string methodName(){
+     return 'its just demo delete';
+    }
 }
